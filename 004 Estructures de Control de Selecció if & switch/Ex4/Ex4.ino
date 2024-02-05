@@ -2,35 +2,33 @@
 **                                                                               **
 **                          Control Structures                                   **
 **                                                                               **
-**  01/02/2024                                               Claudi Gil          **
+**  05/02/2024                                               Claudi Gil          **
 **********************************************************************************/
 
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-int tempAigua = 95;
+float co2 = 3.2;
 
 //********** Setup ****************************************************************
 void setup()              // run once, when the sketch starts
 {
   Serial.begin(9600);     // set up Serial library at 9600 bps
 
-  if (tempAigua < 90)
-    {
-      Serial.print("Aigua encara no bull");
-    } 
-  else if (tempAigua >= 90 && tempAigua < 100)
-    {
-      Serial.print("Aigua apunt de bullir");
-    }
-  else if (tempAigua = 100)
-    {
-      Serial.print("Aigua a 100ºC");
-    }
-  else if (tempAigua > 100)
-    {
-      Serial.print("Aigua bullint");
-    }
+  if(co2 < 3.5)
+    { Serial.println("A");}
+  else if (co2 < 6.5)
+    { Serial.println("B");}
+  else if(co2 < 11.1)
+    { Serial.println("C");}
+  else if(co2 < 17.1)
+    { Serial.println("D");}
+  else if(co2 < 38.2)
+    { Serial.println("E");}
+  else if(co2 < 43.2)
+    { Serial.println("F");}
+  else
+    { Serial.println("G");}
 }
 
 
