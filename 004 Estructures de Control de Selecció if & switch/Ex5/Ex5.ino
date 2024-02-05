@@ -8,13 +8,13 @@
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-float co2 = 3.2;
+float co2 =400 ;
 
 //********** Setup ****************************************************************
 void setup()              // run once, when the sketch starts
 {
   Serial.begin(9600);     // set up Serial library at 9600 bps
-
+  delay(2000);
   if(co2 < 3.5)
     { Serial.println("A");}
   else if (co2 < 6.5)

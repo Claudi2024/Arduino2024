@@ -8,13 +8,13 @@
 //********** Includes *************************************************************
 
 //********** Variables ************************************************************
-int tempAigua = 90;
+int tempAigua = 110;
 
 //********** Setup ****************************************************************
 void setup()              // run once, when the sketch starts
 {
   Serial.begin(9600);     // set up Serial library at 9600 bps
-
+  delay(2000);
   if (tempAigua > 100)
   {
     Serial.print("Aigua bullint");
