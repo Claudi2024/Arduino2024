@@ -23,7 +23,7 @@ void setup()      // run once, when the sketch starts
     Serial.print(" x ");
     Serial.print(i);
     Serial.print( " = ");
-    Serial.println(taula*i);   x 
+    Serial.println(taula*i);
   }
 }
 
