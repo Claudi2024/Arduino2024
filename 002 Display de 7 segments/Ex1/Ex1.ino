@@ -98,5 +98,6 @@ void loop()
  digitalWrite(segG,LOW);
  digitalWrite(segC,LOW);
 
- delay(500);
+ delay(1000);
+
 }
