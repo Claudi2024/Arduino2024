@@ -18,6 +18,8 @@ const byte segD = 9;          // donar nom al pin 9 de l’Arduino
 const byte segG = 10;         // donar nom al pin 10 de l’Arduino
 const byte segF = 11;         // donar nom al pin 11 de l’Arduino
 const byte segE = 12;         // donar nom al pin 12 de l’Arduino
+int i=0;
+
 //********** Setup ****************************************************************
 void setup()
 {
@@ -41,116 +43,149 @@ void setup()
 
  delay(500);
 }
-void loop()
-{
- digitalWrite(segE,LOW);
- digitalWrite(segD,HIGH);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,LOW);
- digitalWrite(segG,LOW);
- digitalWrite(segF,LOW);
+ void loop()
+{ 
+  if(i==0)
+ { 
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,HIGH);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,LOW);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,LOW);
  
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,HIGH);
- digitalWrite(segD,HIGH);
- digitalWrite(segB,HIGH);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,HIGH);
- digitalWrite(segC,LOW);
- digitalWrite(segG,LOW);
- digitalWrite(segF,HIGH);
+  else if(i==1)
+ { 
+  digitalWrite(segE,HIGH);
+  digitalWrite(segD,HIGH);
+  digitalWrite(segB,HIGH);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,HIGH);
+  digitalWrite(segC,LOW);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,HIGH);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,LOW);
- digitalWrite(segD,LOW);
- digitalWrite(segB,HIGH);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,LOW);
- digitalWrite(segG,HIGH);
- digitalWrite(segF,LOW);
+  else if(i==2)
+ { 
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,HIGH);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,LOW);
+  digitalWrite(segG,HIGH);
+  digitalWrite(segF,LOW);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,LOW);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,HIGH);
- digitalWrite(segG,HIGH);
- digitalWrite(segF,LOW);
+  else if(i==3)
+ { 
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,HIGH);
+  digitalWrite(segG,HIGH);
+  digitalWrite(segF,LOW);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,LOW);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,HIGH);
- digitalWrite(segC,HIGH);
- digitalWrite(segG,LOW);
- digitalWrite(segF,HIGH);
+ else if(i==4)
+ { 
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,HIGH);
+  digitalWrite(segC,HIGH);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,HIGH);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,HIGH);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,HIGH);
- digitalWrite(segG,LOW);
- digitalWrite(segF,LOW);
+  else if(i==5)
+ {
+  digitalWrite(segE,HIGH);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,HIGH);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,LOW);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,HIGH);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,LOW);
- digitalWrite(segG,LOW);
- digitalWrite(segF,HIGH);
+  else if(i==6)
+ {
+  digitalWrite(segE,HIGH);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,LOW);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,HIGH);
 
- delay(700);
+  delay(700);
+ }
+   else if(i==7)
+ {
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,HIGH);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,HIGH);
+  digitalWrite(segC,HIGH);
+  digitalWrite(segG,HIGH);
+  digitalWrite(segF,LOW);
 
- digitalWrite(segE,LOW);
- digitalWrite(segD,HIGH);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,HIGH);
- digitalWrite(segC,HIGH);
- digitalWrite(segG,HIGH);
- digitalWrite(segF,LOW);
+  delay(700);
+ }
+     else if(i==8)
+ {
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,LOW);
+  digitalWrite(segC,LOW);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,LOW);
 
- delay(700);
+  delay(700);
+ }
 
- digitalWrite(segE,LOW);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,LOW);
- digitalWrite(segC,LOW);
- digitalWrite(segG,LOW);
- digitalWrite(segF,LOW);
+  else if(i==9)
+ {
+  digitalWrite(segE,LOW);
+  digitalWrite(segD,LOW);
+  digitalWrite(segB,LOW);
+  digitalWrite(segH,HIGH);
+  digitalWrite(segA,HIGH);
+  digitalWrite(segC,HIGH);
+  digitalWrite(segG,LOW);
+  digitalWrite(segF,LOW);
 
- delay(700);
-
- digitalWrite(segE,LOW);
- digitalWrite(segD,LOW);
- digitalWrite(segB,LOW);
- digitalWrite(segH,HIGH);
- digitalWrite(segA,HIGH);
- digitalWrite(segC,HIGH);
- digitalWrite(segG,LOW);
- digitalWrite(segF,LOW);
-
- delay(700);
-
+  delay(700);
+ }
+  i=i+1;
+  delay(700);
+  if(i>9)
+ {
+  i=0;
+ }
 }
