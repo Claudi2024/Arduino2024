@@ -40,7 +40,7 @@ void loop()
  }
     if (buttonState2 == 0)   //polsador2 premut, muntat amb Pull-up
  {
-   digitalWrite(led0, HIGH);    // posar a 5V el pin 5
+   digitalWrite(led0,HIGH);    // posar a 5V el pin 5
   digitalWrite(led1, HIGH);    // posar a 5V el pin 6
   digitalWrite(led2, HIGH);    // posar a 5V el pin 7
   digitalWrite(led3, HIGH);    // posar a 5V el pin 8

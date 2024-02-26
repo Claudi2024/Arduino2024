@@ -12,16 +12,19 @@
 //********** Variables ************************************************************
 const byte segH = 5;          // donar nom al pin 5 de l’Arduino
 const byte segB = 6;          // donar nom al pin 6 de l’Arduino
-const byte segA = 7;          // donar nom al pin 7 de l’Arduino
+const byte segA = 7;          // donar nom al pin 7 de l’Arduin
 const byte segC = 8;          // donar nom al pin 8 de l’Arduino
 const byte segD = 9;          // donar nom al pin 9 de l’Arduino
 const byte segG = 10;         // donar nom al pin 10 de l’Arduino
 const byte segF = 11;         // donar nom al pin 11 de l’Arduino
 const byte segE = 12;         // donar nom al pin 12 de l’Arduino
 int i=0;
-
+const byte buttonpin = 2;
+int buttonState;
+int play;
 //********** Setup ****************************************************************
 void setup()
+
 {
   pinMode(segH, OUTPUT);     // definir el pin 5 com una sortida
   pinMode(segB, OUTPUT);     // definir el pin 6 com una sortida
@@ -31,6 +34,7 @@ void setup()
   pinMode(segG, OUTPUT);     // definir el pin 10 com una sortida
   pinMode(segF, OUTPUT);     // definir el pin 11 com una sortida
   pinMode(segE, OUTPUT);     // definir el pin 12 com una sortida
+  pinMode(buttonpin,INPUT);
 
  digitalWrite(segE,HIGH);
  digitalWrite(segD,HIGH);
@@ -41,12 +45,14 @@ void setup()
  digitalWrite(segG,HIGH);
  digitalWrite(segF,HIGH);
 
- delay(500);
+ delay(150);
 }
  void loop()
 { 
+ buttonState = digitalRead(buttonpin);
+ 
   if(i==0)
- { 
+{ 
   digitalWrite(segE,LOW);
   digitalWrite(segD,HIGH);
   digitalWrite(segB,LOW);
@@ -56,7 +62,7 @@ void setup()
   digitalWrite(segG,LOW);
   digitalWrite(segF,LOW);
  
-  delay(700);
+  delay(100);
  }
 
   else if(i==1)
@@ -70,7 +76,7 @@ void setup()
   digitalWrite(segG,LOW);
   digitalWrite(segF,HIGH);
 
-  delay(700);
+  delay(100);
  }
 
   else if(i==2)
@@ -84,7 +90,7 @@ void setup()
   digitalWrite(segG,HIGH);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
 
   else if(i==3)
@@ -98,7 +104,7 @@ void setup()
   digitalWrite(segG,HIGH);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
 
  else if(i==4)
@@ -112,7 +118,7 @@ void setup()
   digitalWrite(segG,LOW);
   digitalWrite(segF,HIGH);
 
-  delay(700);
+  delay(100);
  }
 
   else if(i==5)
@@ -126,7 +132,7 @@ void setup()
   digitalWrite(segG,LOW);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
 
   else if(i==6)
@@ -138,9 +144,9 @@ void setup()
   digitalWrite(segA,LOW);
   digitalWrite(segC,LOW);
   digitalWrite(segG,LOW);
-  digitalWrite(segF,HIGH);
+  digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
    else if(i==7)
  {
@@ -153,7 +159,7 @@ void setup()
   digitalWrite(segG,HIGH);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
      else if(i==8)
  {
@@ -166,7 +172,7 @@ void setup()
   digitalWrite(segG,LOW);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
 
   else if(i==9)
@@ -175,16 +181,25 @@ void setup()
   digitalWrite(segD,LOW);
   digitalWrite(segB,LOW);
   digitalWrite(segH,HIGH);
-  digitalWrite(segA,HIGH);
+  digitalWrite(segA,LOW);
   digitalWrite(segC,HIGH);
   digitalWrite(segG,LOW);
   digitalWrite(segF,LOW);
 
-  delay(700);
+  delay(100);
  }
-  i=i+1;
-  delay(700);
+ if(buttonState==0)
+ { 
+ play=!play;
+ }
+if (play==0)
+ {
+  i=i+1; 
+ }
+  delay(100);
+ 
   if(i>9)
+
  {
   i=0;
  }
