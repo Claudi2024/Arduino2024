@@ -12,7 +12,7 @@
 //********** Variables ************************************************************
 const byte segH = 5;          // donar nom al pin 5 de l’Arduino
 const byte segB = 6;          // donar nom al pin 6 de l’Arduino
-const byte segA = 7;          // donar nom al pin 7 de l’Arduino
+const byte segA = 7;          // donar nom al pin 7 de l’Arduinox
 const byte segC = 8;          // donar nom al pin 8 de l’Arduino
 const byte segD = 9;          // donar nom al pin 9 de l’Arduino
 const byte segG = 10;         // donar nom al pin 10 de l’Arduino
