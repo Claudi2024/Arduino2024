@@ -26,8 +26,11 @@ void loop()
   valPot0 = analogRead(pot0);    // llegir valor potenciòmetre
   valPot1 = analogRead(pot1); 
 
-  tone(xiulet, 1000,3000);  // xiulet de durada valPot0
-  delay(2*3000);            // esperar valPot0 del xiulet + valPot0 silenci
+  tone(xiulet,1000,200);   // xiulet de durada valPot0
+  delay(200);
+  tone(xiulet,1250,200);
+  delay(200);            // esperar valPot0 del xiulet + valPot0 silenci
+
 }
 
 //********** Funcions *************************************************************
